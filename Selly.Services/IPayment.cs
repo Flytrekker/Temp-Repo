@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Selly.Services
 {
-    interface IPayment
+    public interface IPayment 
     {
+        void Pay();
     }
 }

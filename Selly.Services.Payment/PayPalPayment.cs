@@ -2,7 +2,11 @@
 
 namespace Selly.Services.Payment
 {
-    public class PayPalPayment
+    public class PayPalPayment : IPayment
     {
+        public void Pay()
+        {
+            Console.WriteLine("Paid Via Cash PayPal");
+        }
     }
 }
