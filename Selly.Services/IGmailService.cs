@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Selly.Services
 {
-    public interface IEmailService
+    public interface IGmailService
     {
         void SendMail();
     }

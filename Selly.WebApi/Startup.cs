@@ -11,6 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
+using Selly.Services;
+using Selly.Services.Email;
+
 namespace Selly.WebApi
 {
     public class Startup
@@ -26,6 +29,8 @@ namespace Selly.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddScoped<IGmailService, GmailService>();
+            services.AddScoped<ISmtpService, SmtpEmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,3 +50,4 @@ namespace Selly.WebApi
         }
     }
 }
+

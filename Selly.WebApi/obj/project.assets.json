@@ -4333,6 +4333,29 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Selly.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Selly.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Selly.Services.dll": {}
+        }
+      },
+      "Selly.Services.Email/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Selly.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Selly.Services.Email.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Selly.Services.Email.dll": {}
+        }
       }
     }
   },
@@ -11491,12 +11514,24 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Selly.Services/1.0.0": {
+      "type": "project",
+      "path": "../Selly.Services/Selly.Services.csproj",
+      "msbuildProject": "../Selly.Services/Selly.Services.csproj"
+    },
+    "Selly.Services.Email/1.0.0": {
+      "type": "project",
+      "path": "../Selly.Services.Email/Selly.Services.Email.csproj",
+      "msbuildProject": "../Selly.Services.Email/Selly.Services.Email.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.App >= 2.1.1",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Selly.Services >= 1.0.0",
+      "Selly.Services.Email >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -11531,7 +11566,14 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\MyWork\\SellyAutomotive\\Code\\Tempo\\Temp-Repo\\Selly.Services.Email\\Selly.Services.Email.csproj": {
+              "projectPath": "C:\\MyWork\\SellyAutomotive\\Code\\Tempo\\Temp-Repo\\Selly.Services.Email\\Selly.Services.Email.csproj"
+            },
+            "C:\\MyWork\\SellyAutomotive\\Code\\Tempo\\Temp-Repo\\Selly.Services\\Selly.Services.csproj": {
+              "projectPath": "C:\\MyWork\\SellyAutomotive\\Code\\Tempo\\Temp-Repo\\Selly.Services\\Selly.Services.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

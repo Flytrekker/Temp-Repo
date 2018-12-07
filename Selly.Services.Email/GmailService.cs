@@ -2,7 +2,7 @@
 
 namespace Selly.Services.Email
 {
-    public class GmailService : IEmailService
+    public class GmailService : IGmailService
     {
         public void SendMail()
         {
